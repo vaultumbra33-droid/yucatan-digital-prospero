@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yucatán Digital y Próspero | Propuesta Estratégica v1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="pinModal" class="pin-modal active">
+        <div class="pin-modal-backdrop"></div>
+        <div class="pin-modal-content">
+            <div class="pin-header">
+                <div class="pin-logo"><i class="fas fa-shield-halved"></i></div>
+                <h2>Acceso Protegido</h2>
+                <p>Yucatán Digital y Próspero</p>
+            </div>
+            <div class="pin-body">
+                <p class="pin-instruction">Ingrese el PIN de acceso</p>
+                <div class="pin-inputs">
+                    <input type="password" maxlength="1" class="pin-digit" data-index="0" inputmode="numeric">
+                    <input type="password" maxlength="1" class="pin-digit" data-index="1" inputmode="numeric">
+                    <input type="password" maxlength="1" class="pin-digit" data-index="2" inputmode="numeric">
+                    <input type="password" maxlength="1" class="pin-digit" data-index="3" inputmode="numeric">
+                </div>
+                <div id="pinError" class="pin-error"></div>
+                <button id="pinSubmit" class="pin-submit">Acceder</button>
+            </div>
+            <div class="pin-footer"><small>Acceso restringido · Propuesta Confidencial · v1.0 XGT Group</small></div>
+        </div>
+    </div>
+
+    <div id="mainSite" class="main-site">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="logo-text">
+                        <span class="logo-title">Yucatán Digital y Próspero</span>
+                        <span class="logo-subtitle">Propuesta Estratégica 1.0 · Octubre 2026 · XGT Group</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#resumen" class="nav-link">Resumen</a></li>
+                    <li class="nav-item"><a href="#diagnostico" class="nav-link">Diagnóstico</a></li>
+                    <li class="nav-item"><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                    <li class="nav-item"><a href="#recaudacion" class="nav-link">Recaudación</a></li>
+                    <li class="nav-item"><a href="#contratacion" class="nav-link">Contratación</a></li>
+                    <li class="nav-item"><a href="#riesgos" class="nav-link">Riesgos</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link">Acercamiento</a></li>
+                    <li class="nav-item"><a href="#glosario" class="nav-link">Glosario</a></li>
+                    <li class="nav-item"><a href="#anexos" class="nav-link">Anexos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <header id="inicio" class="hero">
+            <div class="hero-bg">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>PROPUESTA CONFIDENCIAL</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Yucatán Digital</span>
+                    <span class="hero-title-line gradient-text">y Próspero</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Estudio de oportunidades y portafolio de proyectos tecnológicos, de recaudación, movilidad, turismo, salud y servicios para el Gobierno del Estado de Yucatán
+                </p>
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Para: Lic. Joaquín Jesús Díaz Mena, Gobernador Constitucional</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <i class="fas fa-building-columns"></i>
+                        <span>XGT Group Technologies · Jesús Antonio Bustamante Araujo</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Versión 1.0 · Octubre 2026</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#portafolio" class="btn btn-primary">
+                        <span>Ver las 13 Fichas Completas</span>
+                        <i class="fas fa-file-invoice"></i>
+                    </a>
+                    <a href="#mapa" class="btn btn-secondary">
+                        <span>Mapa de Oportunidades</span>
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-indicator">
+                    <span>Deslizar</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- STATS -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number">AA-.mx</div>
+                            <div class="stat-label">Calificación crediticia, perspectiva estable (Moody's Local)</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number">+19%</div>
+                            <div class="stat-label">Crecimiento de recaudación estatal, 1er semestre 2026</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-plane-departure"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number">2.6M</div>
+                            <div class="stat-label">Turistas en 2025 · meta 2.7M en 2026</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number">13</div>
+                            <div class="stat-label">Proyectos en cinco frentes, independientes entre sí</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="stat-content">
+                            <div class="stat-number">100</div>
+                            <div class="stat-label">Días para primeros resultados visibles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 RESUMEN EJECUTIVO -->
+        <section id="resumen" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">01</span>
+                    <h2 class="section-title">Resumen Ejecutivo</h2>
+                    <p class="section-subtitle">Fortalezas poco comunes y retos que la tecnología puede atender</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-scale-balanced"></i> Fortalezas vs. retos donde la tecnología puede atender</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th style="width:50%">Fortalezas</th><th>Retos concretos</th></tr></thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pobreza multidimensional 26.6% (debajo del nacional 29.6%) y extrema 3.6% [17] · Calificación AA-.mx estable [4] · Impuestos estatales +19% (1er semestre 2026) [3] · 2.6M turistas en 2025, meta 2.7M [23] · Plan «Renacimiento Maya 2024-2030» con 87% de compromisos iniciados o presupuestados [15]</td>
+                                    <td>Pobreza rural 35.2% vs. urbana 25.1% [17]; conectividad más débil en el interior [12] · Va y Ven creció 40% pero con tensiones financieras [5][6] · Más de 12 mil alojamientos digitales sin regulación plena [14] · Turismo médico sin coordinación, datos ni certificaciones para competir con Cancún, Monterrey o Guadalajara [18][25]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-layer-group"></i> Los cinco frentes del portafolio — proyectos independientes</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Frente</th><th>Proyectos incluidos</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Gobierno digital y recaudación</strong></td><td>Ventanilla única (P1), licencia y padrón vehicular digital (P2), registro público, catastro y escritura digital (P3), motor de recaudación (P4) y app de gobierno (P11)</td></tr>
+                                <tr><td><strong>Movilidad</strong></td><td>Credencial QR y recaudo electrónico (P5) y Va y Ven con verificación de kilómetros, flota y concesiones complementarias (P6)</td></tr>
+                                <tr><td><strong>Economía local y pagos</strong></td><td>Red de POS comunitario en tortillerías y abarrotes, con proveeduría local y crédito (P7)</td></tr>
+                                <tr><td><strong>Servicios básicos y energía</strong></td><td>Agua inteligente con energía solar para bombeo (P8), financiamiento energético a ayuntamientos (P9) y conectividad pública en el interior (P10)</td></tr>
+                                <tr><td><strong>Turismo y salud</strong></td><td>Pase turístico y registro de hospedaje (P12) y Yucatán Health Hub: turismo médico con telemedicina y salud digital para el interior (P13)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-compass"></i> Arquitectura de la propuesta — principios y lineamientos</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Principio / Lineamiento</th><th>Detalle</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Financiamiento por comisión y ahorro</strong></td><td>Los equipos y plataformas no representan gasto inicial para el estado</td></tr>
+                                <tr><td><strong>Transición gradual</strong></td><td>Efectivo y atención asistida mientras crece la adopción digital</td></tr>
+                                <tr><td><strong>Medición desde el inicio</strong></td><td>Línea base e indicadores públicos para cada proyecto</td></tr>
+                                <tr><td><strong>Soberanía de datos</strong></td><td>Los datos de la ciudadanía permanecen bajo control del Estado y en territorio nacional</td></tr>
+                                <tr><td><strong>Interoperabilidad</strong></td><td>Interfaces documentadas con los sistemas de AAFY, SSP, ATY, INSEJUPY y municipios</td></tr>
+                                <tr><td><strong>Seguridad por diseño</strong></td><td>Cifrado, auditoría y pruebas de penetración desde la arquitectura</td></tr>
+                                <tr><td><strong>Transferencia de conocimiento</strong></td><td>Capacitación al personal estatal y a las universidades locales para evitar dependencia tecnológica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-route"></i> Alcance y metodología — cuatro pasos del estudio</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr><td style="width:70px"><strong>1</strong></td><td>Revisión del contexto político e institucional</td></tr>
+                                <tr><td><strong>2</strong></td><td>Diagnóstico de condiciones sociales, económicas y fiscales</td></tr>
+                                <tr><td><strong>3</strong></td><td>Revisión del marco normativo y de las plataformas ya existentes en el estado, para complementarlas y no duplicarlas</td></tr>
+                                <tr><td><strong>4</strong></td><td>Construcción de un portafolio con su lógica económica, modelo de contratación y hoja de ruta</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 DIAGNOSTICO -->
+        <section id="diagnostico" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">02</span>
+                    <h2 class="section-title">Diagnóstico del Estado</h2>
+                    <p class="section-subtitle">Contexto institucional, social, económico, fiscal y marco habilitador</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-landmark-flag"></i> 3.1 Contexto institucional</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Elemento</th><th>Detalle</th></tr></thead>
+                            <tbody>
+                                <tr><td>Periodo de gobierno</td><td>Lic. Joaquín Jesús Díaz Mena: gobierna desde el 1 de octubre de 2024, concluye en 2030 (ventana de ejecución de poco menos de cuatro años) [1][15]</td></tr>
+                                <tr><td>Cobertura</td><td>Ha recorrido los 106 municipios; Plan Estatal de Desarrollo «Renacimiento Maya 2024-2030»; Primer Informe en enero de 2026</td></tr>
+                                <tr><td>Proyectos estratégicos</td><td>Ampliación del Puerto de Altura de Progreso y Tren de Carga Poxilá–Progreso</td></tr>
+                                <tr><td>Agenda digital</td><td>Digitalización de procesos y formación de un ecosistema tecnológico con jóvenes como parte de la agenda pública [10b]</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-house-circle-exclamation"></i> 3.2 Condiciones sociales y económicas</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Indicador</th><th>Valor</th><th>Referencia</th></tr></thead>
+                            <tbody>
+                                <tr><td>Pobreza multidimensional (INEGI 2024)</td><td><strong>26.6%</strong></td><td>Debajo del promedio nacional (29.6%) [17]</td></tr>
+                                <tr><td>Pobreza extrema</td><td><strong>3.6%</strong></td><td>Por debajo del nacional (5.3%) [17]</td></tr>
+                                <tr><td>Desigualdad territorial</td><td>Rural <strong>35.2%</strong> vs. urbana <strong>25.1%</strong></td><td>Las soluciones deben diseñarse con acceso asistido, atención en maya yucateco, celular básico y puntos de atención en el comercio de barrio [17]</td></tr>
+                                <tr><td>Turismo (motor central)</td><td>2.6M turistas en 2025; meta 2.7M en 2026</td><td>11,566 mdp de inversión turística captada desde el inicio de la administración a septiembre de 2026 [23][24]</td></tr>
+                                <tr><td>Procedencia del turismo internacional</td><td>Norteamérica 49.7%</td><td>EE.UU. 40.2% y Canadá 9.5%, según Simty [21]</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="figures-grid">
+                    <div class="figure-card" style="grid-column: 1 / -1; max-width: 900px; margin: 0 auto 2rem;">
+                        <div class="figure-header">Figura 1 · Pobreza multidimensional y extrema, 2024 — Fuente: INEGI [17]</div>
+                        <img src="assets/fig01-pobreza.png" alt="Pobreza 2024 en Yucatán" class="figure-img">
+                        <div class="figure-caption">Yucatán está por debajo del promedio nacional en ambas mediciones: 26.6% vs. 29.6% en pobreza multidimensional y 3.6% vs. 5.3% en pobreza extrema. La mejora es sostenida pero desigual entre zonas rurales y urbanas.</div>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-file-shield"></i> 3.3 Gobierno digital y servicios</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Elemento</th><th>Detalle</th></tr></thead>
+                            <tbody>
+                                <tr><td>Avance existente</td><td>Digitalización de procesos reportada [10b]; AAFY opera tableros de control en tiempo real [3]; INSEJUPY ofrece plataformas digitales y un Módulo de Notaría Digital [10]; el programa Yucatán Digital conecta escuelas, oficinas y centros de salud [12]</td></tr>
+                                <tr><td>Licencias</td><td>Se tramitan en módulos de la SSP, con exenciones y descuentos del Decreto 143/2025 que requieren acreditación documental [9]; costos 2026 de chofer: $950, $1,494 y $2,580 pesos (2, 3 y 5 años)</td></tr>
+                                <tr><td>Registro Público y Catastro</td><td>INSEJUPY reporta <strong>1,666,764</strong> predios con folio electrónico, unos <strong>395 mil</strong> trámites anuales y cartografía digital de 41,137 km² [10]; oportunidad en actualización permanente, apoyo a municipios y protección patrimonial</td></tr>
+                                <tr><td>Pendiente</td><td>Confirmar con cada dependencia qué trámites ya son 100% digitales y cuáles siguen siendo presenciales, para definir el piloto de la ventanilla única</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-scale-balanced"></i> 3.4 Finanzas públicas</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Dato</th><th>Detalle</th></tr></thead>
+                            <tbody>
+                                <tr><td>Ley de Ingresos 2026</td><td>Ingresos totales estimados por <strong>66,408 mdp</strong>; recaudación de ingresos fiscales locales <strong>8,180 mdp</strong> [2]</td></tr>
+                                <tr><td>Avance 2026</td><td>AAFY reporta un aumento superior a <strong>19%</strong> en la recaudación de impuestos estatales durante el primer semestre [3]</td></tr>
+                                <tr><td>Ingresos propios</td><td>Moody's Local estima que representen en promedio <strong>25.7%</strong> de los ingresos operativos en 2026-2027 [4]</td></tr>
+                                <tr><td>Pendiente</td><td>Serie histórica de ingresos propios por concepto con la Secretaría de Administración y Finanzas, para calibrar el potencial de cada proyecto</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-bus"></i> 3.5 Movilidad y transporte — Va y Ven</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Punto</th><th>Detalle</th></tr></thead>
+                            <tbody>
+                                <tr><td>Crecimiento</td><td>De 265,194 pasajeros diarios en 2024 a <strong>372,638</strong> en 2025 (+40%); cubre 81% de Mérida y su zona metropolitana [5]</td></tr>
+                                <tr><td>Marco nuevo</td><td>Decreto 187/2026, vigente desde el 26 de mayo: sustituye el pago por «kilómetro garantizado» por el pago de kilómetros efectivamente recorridos y reorganiza la ATY [5]</td></tr>
+                                <tr><td>Tensiones</td><td>Junio 2026: adeudo reportado de <strong>189 mdp</strong>, reducciones temporales de flota y un paro de operadores; el servicio se restableció tras mesas de diálogo [6][7]</td></tr>
+                                <tr><td>Rural</td><td>En zonas rurales, los mototaxis son con frecuencia el único medio disponible [8]</td></tr>
+                                <tr><td>Pendiente</td><td>Confirmar con ATY el sistema de cobro actual del pasaje y el estado de los equipos a bordo</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-stethoscope"></i> 3.6 Turismo, hospedaje y turismo médico</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Punto</th><th>Detalle</th></tr></thead>
+                            <tbody>
+                                <tr><td>Hospedaje</td><td>Más de <strong>12 mil</strong> alojamientos operan en plataformas digitales sin regulación plena; el Gobierno trabaja en su regulación; el Impuesto sobre Hospedaje es de 4.5% en 2026 [14]</td></tr>
+                                <tr><td>Turismo médico · activos</td><td>Mérida cuenta con hospitales privados de alta especialidad, un clúster médico y un portal oficial de promoción (Yucatán Healthcare) [19][20]; especialidades más demandadas por pacientes extranjeros: implantes dentales, cirugía maxilofacial, cirugía estética y reconstructiva, y cardiología invasiva [19]; el aeropuerto de Mérida tiene vuelos directos con Miami, Dallas, Houston y Orlando, más tres rutas canadienses en la temporada de invierno 2026-2027, entre ellas Toronto–Mérida con Air Canada a partir del 21 de noviembre [21][22]</td></tr>
+                                <tr><td>Turismo médico · brechas</td><td>Escasez de personal bilingüe y de facilitadores; falta de certificación internacional hospitalaria (Joint Commission) que permita usar seguros extranjeros — Cancún tenía dos de los siete hospitales acreditados, y en Mérida los hospitales declararon su intención de obtenerla; hospedaje poco adaptado a pacientes [18][20]; falta de regulación y recolección de datos a nivel nacional [25]</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-wifi"></i> 3.7 Conectividad · 3.8 Agua y energía · 3.9 Seguridad · 3.10 Marco federal de pagos</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr><td style="white-space:nowrap"><strong>3.7 Conectividad</strong></td><td>84.3% de la población de seis años o más usó internet en 2025 (nacional 86.1%) [11]; Yucatán Digital conectó con fibra a más de 2,100 escuelas (73%) [12]; Mérida reporta 240 puntos de WiFi gratuito [13]; brecha marcada entre la capital y el interior [12]; la brecha de calidad pesa más que la de cobertura [16]</td></tr>
+                                <tr><td><strong>3.8 Agua y energía</strong></td><td>El agua potable es un derecho humano con mínimo vital garantizado; Yucatán depende de un acuífero kárstico, vulnerable a la contaminación y a las fugas, lo que hace especialmente valiosa la medición y el control de pérdidas; el consumo eléctrico del bombeo es uno de los mayores gastos de los organismos (dato a validar con JAPAY y municipios)</td></tr>
+                                <tr><td><strong>3.9 Seguridad</strong></td><td>Yucatán mantiene niveles de seguridad que el propio Gobierno destaca como activo del estado [15]; favorece la inversión turística y el turismo médico; toda operación en campo debe planearse con protocolos y coordinación institucional</td></tr>
+                                <tr><td><strong>3.10 Marco federal 2026</strong></td><td>Reforma a las reglas del SPEI, impulso a CoDi, pagos digitales obligatorios en ciertos sectores e iniciativa de Ley de Economía Digital para Pagos Digitales y Electrónicos (Paquete Económico 2027), que obligaría a los tres órdenes de gobierno a recibir pagos digitales — aún es una iniciativa; los datos de uso de efectivo de otros estados NO son extrapolables a Yucatán: se requiere una medición local (Banxico, ENIF)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 PORTAFOLIO P1-P13 -->
+        <section id="portafolio" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">03</span>
+                    <h2 class="section-title">Portafolio de Proyectos P1 – P13</h2>
+                    <p class="section-subtitle">Fichas completas organizadas por frente: problema, solución, componentes, impactos, modelo, inversión, piloto, indicadores y riesgos</p>
+                </div>
+
+                <div id="gobierno" class="portfolio-category">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-landmark"></i></div>
+                        <div>
+                            <h3 class="category-title">Gobierno Digital y Recaudación</h3>
+                            <p class="category-subtitle">Ventanilla única, identidad digital, catastro y motor fiscal</p>
+                        </div>
+                    </div>
+                    <div class="full-fichas">
+                        <article class="full-ficha" id="ficha-P1"></article>
+                        <article class="full-ficha" id="ficha-P2"></article>
+                        <article class="full-ficha" id="ficha-P3"></article>
+                        <article class="full-ficha" id="ficha-P4"></article>
+                        <article class="full-ficha" id="ficha-P11"></article>
+                    </div>
+                </div>
+
+                <div id="movilidad" class="portfolio-category">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-bus"></i></div>
+                        <div>
+                            <h3 class="category-title">Movilidad y Transporte</h3>
+                            <p class="category-subtitle">Recaudo electrónico y sostenibilidad del Va y Ven</p>
+                        </div>
+                    </div>
+                    <div class="full-fichas">
+                        <article class="full-ficha" id="ficha-P5"></article>
+                        <article class="full-ficha" id="ficha-P6"></article>
+                    </div>
+                </div>
+
+                <div id="economia" class="portfolio-category">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-store"></i></div>
+                        <div>
+                            <h3 class="category-title">Economía Local y Pagos</h3>
+                            <p class="category-subtitle">Inclusión financiera desde la tienda de barrio</p>
+                        </div>
+                    </div>
+                    <div class="full-fichas">
+                        <article class="full-ficha full-ficha-highlight" id="ficha-P7"></article>
+                    </div>
+                </div>
+
+                <div id="servicios" class="portfolio-category">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-water"></i></div>
+                        <div>
+                            <h3 class="category-title">Servicios Básicos y Energía</h3>
+                            <p class="category-subtitle">Agua, energía y conectividad para todos los municipios</p>
+                        </div>
+                    </div>
+                    <div class="full-fichas">
+                        <article class="full-ficha" id="ficha-P8"></article>
+                        <article class="full-ficha" id="ficha-P9"></article>
+                        <article class="full-ficha" id="ficha-P10"></article>
+                    </div>
+                </div>
+
+                <div id="turismo" class="portfolio-category">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-umbrella-beach"></i></div>
+                        <div>
+                            <h3 class="category-title">Turismo y Salud</h3>
+                            <p class="category-subtitle">Pase turístico, hospedaje regulado y hub de salud verificado</p>
+                        </div>
+                    </div>
+                    <div class="full-fichas">
+                        <article class="full-ficha" id="ficha-P12"></article>
+                        <article class="full-ficha full-ficha-highlight" id="ficha-P13"></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 MAPA DE OPORTUNIDADES -->
+        <section id="mapa" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">04</span>
+                    <h2 class="section-title">Mapa de Oportunidades</h2>
+                    <p class="section-subtitle">Contribución de cada proyecto a los cuatro objetivos (valoración cualitativa, sujeta a validación)</p>
+                </div>
+                <div class="figures-grid">
+                    <div class="figure-card" style="grid-column: 1 / -1; max-width: 980px; margin: 0 auto 2rem;">
+                        <div class="figure-header">Figura 2 · Contribución de cada proyecto a los cuatro objetivos</div>
+                        <img src="assets/fig02-mapa-oportunidades.png" alt="Mapa de oportunidades Yucatán" class="figure-img">
+                        <div class="figure-caption">Cuatro objetivos: <strong>aumentar la economía</strong> · <strong>aumentar la recaudación</strong> · <strong>mejorar la calidad de vida</strong> · <strong>fortalecer la imagen de gobierno</strong>. Destacan P7 (economía alta), P2/P3/P4/P12 (recaudación alta) y P13 con alto valor en cuatro objetivos. Cada proyecto es independiente y puede adoptarse por separado.</div>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-table-cells"></i> Matriz de priorización — impacto, complejidad y primer resultado</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Proyecto</th><th>Impacto en ingresos</th><th>Impacto ciudadano</th><th>Complejidad</th><th>Primer resultado</th><th>Inversión del Estado</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>P1</strong> Ventanilla</td><td>Medio</td><td>Alto</td><td>Media</td><td>3 meses</td><td>Media</td></tr>
+                                <tr><td><strong>P2</strong> Licencia y padrón</td><td>Medio a alto</td><td>Alto</td><td>Media</td><td>3 meses</td><td>Baja a media</td></tr>
+                                <tr><td><strong>P3</strong> Registro y catastro</td><td>Alto (mediano plazo)</td><td>Medio</td><td>Alta</td><td>6 meses</td><td>Media a alta</td></tr>
+                                <tr><td><strong>P4</strong> Motor de recaudación</td><td>Alto</td><td>Medio</td><td>Media</td><td>3 a 4 meses</td><td>Media</td></tr>
+                                <tr><td><strong>P5</strong> Credencial QR</td><td>Medio</td><td>Alto</td><td>Media</td><td>4 a 6 meses</td><td>Baja a media</td></tr>
+                                <tr><td><strong>P6</strong> Va y Ven</td><td>Medio</td><td>Alto</td><td>Alta</td><td>4 meses (telemetría)</td><td>Baja a alta</td></tr>
+                                <tr><td><strong>P7</strong> POS comunitario</td><td>Medio</td><td>Alto</td><td>Media</td><td>4 a 6 meses</td><td>Baja a media</td></tr>
+                                <tr><td><strong>P8</strong> Agua y solar</td><td>Medio</td><td>Alto</td><td>Alta</td><td>6 a 9 meses</td><td>Media a alta</td></tr>
+                                <tr><td><strong>P9</strong> Energía municipal</td><td>Medio</td><td>Medio</td><td>Media</td><td>6 a 12 meses</td><td>Media</td></tr>
+                                <tr><td><strong>P10</strong> Yucatán Conectado</td><td>Bajo</td><td>Alto</td><td>Media</td><td>4 meses</td><td>Nula o baja</td></tr>
+                                <tr><td><strong>P11</strong> App de gobierno</td><td>Medio</td><td>Alto</td><td>Media</td><td>3 meses</td><td>Media</td></tr>
+                                <tr><td><strong>P12</strong> Pase y hospedaje</td><td>Medio a alto</td><td>Medio</td><td>Media</td><td>4 meses</td><td>Media</td></tr>
+                                <tr><td><strong>P13</strong> Health Hub</td><td>Alto (económico)</td><td>Alto</td><td>Media</td><td>4 a 6 meses</td><td>Media</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 RECAUDACION -->
+        <section id="recaudacion" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">05</span>
+                    <h2 class="section-title">Palancas de Recaudación y Lógica Económica</h2>
+                    <p class="section-subtitle">Cuatro mecanismos para aumentar la recaudación propia, sin nuevos impuestos</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-key"></i> Palancas de recaudación</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Palanca</th><th>Qué cambia</th><th>Proyectos</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Ampliar la base</strong></td><td>Detectar y regularizar contribuyentes omisos con cruce de padrones y una ruta de formalización gradual para micronegocios y hospedaje</td><td>P3, P4, P7, P12</td></tr>
+                                <tr><td><strong>Elevar el cumplimiento</strong></td><td>Pago fácil por QR, recordatorios, puntos de pago de barrio y cobro en línea de derechos, refrendos y multas</td><td>P1, P2, P4, P7, P11</td></tr>
+                                <tr><td><strong>Reducir costo y fuga</strong></td><td>Menos efectivo, menos intermediación; recibos de luz más bajos con solar y LED; pérdidas de agua menores</td><td>P1, P2, P5, P8, P9</td></tr>
+                                <tr><td><strong>Crear ingresos por servicios y concesiones</strong></td><td>Derechos de concesión, comisiones privadas, servicios registrales y catastrales, pase turístico, turismo médico y ahorro compartido</td><td>P3, P5, P6, P7, P8, P12, P13</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-chart-column"></i> Escenarios de trabajo sobre la base de 8,180 mdp (hipótesis, no proyección)</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Escenario</th><th>Mejora sobre la base digitalizada</th><th>Equivalencia sobre 8,180 mdp</th><th>Lectura</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Conservador</strong></td><td>+3%</td><td>≈ 245 mdp anuales</td><td>Solo mejora de cobro y menor fuga en trámites digitalizados</td></tr>
+                                <tr><td><strong>Base</strong></td><td>+6%</td><td>≈ 491 mdp anuales</td><td>Incluye regularización de omisos y puntos de pago de barrio</td></tr>
+                                <tr><td><strong>Ambicioso</strong></td><td>+10%</td><td>≈ 818 mdp anuales</td><td>Suma formalización, concesiones nuevas y registro y catastro actualizados</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-store"></i> Economía de la red de POS (sección 7.2)</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr><td>Como el equipo se entrega sin costo y se financia con comisiones, la clave es el volumen de operaciones por comercio. Con un supuesto ilustrativo de <strong>50 centavos de comisión por operación</strong> y 30 días por mes, un equipo de <strong>2,500 pesos</strong> se recupera en unos <strong>4 meses</strong> con 40 operaciones diarias y en más de <strong>11 meses</strong> con 15 operaciones diarias.</td></tr>
+                                <tr><td>Por eso se recomienda entregar el equipo en comodato con un mínimo mensual de operaciones, la posibilidad de retirarlo si no se usa, y empezar por las zonas de mayor tráfico. Los supuestos deben reemplazarse con cifras reales de comisión y costo de equipo.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 CONTRATACION -->
+        <section id="contratacion" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">06</span>
+                    <h2 class="section-title">Esquemas de Contratación y Marco Jurídico</h2>
+                    <p class="section-subtitle">La modalidad se elige proyecto por proyecto con revisión de la Consejería Jurídica</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-file-signature"></i> Modalidades posibles</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Modalidad</th><th>Cuándo conviene</th><th>Consideraciones</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Contrato de servicios / licenciamiento (SaaS)</strong></td><td>Ventanilla, app de gobierno, licencia digital, motor fiscal</td><td>Rápida implementación; costo predecible; resguardar la propiedad de los datos para el Estado</td></tr>
+                                <tr><td><strong>Comisión privada por operación</strong></td><td>Red de POS, recaudo de transporte, pase turístico, plataforma de turismo médico</td><td>No genera gasto al gobierno; requiere convenio, reglas de tarifas y niveles de servicio</td></tr>
+                                <tr><td><strong>Ahorro compartido o arrendamiento</strong></td><td>Solar para bombas, luminarias, medidores</td><td>El pago depende del ahorro verificado; requiere línea base y auditoría independiente</td></tr>
+                                <tr><td><strong>Concesión o asociación público-privada</strong></td><td>Recaudo electrónico, estacionamiento, publicidad, WiFi público, plataforma de salud</td><td>Requiere estudio de viabilidad, procedimiento y revisión de la ley estatal aplicable</td></tr>
+                                <tr><td><strong>Crédito con banca aliada</strong></td><td>Capital de trabajo a comercios, financiamiento a ayuntamientos y concesionarios</td><td>Revisar reglas de deuda pública municipal y de operación bancaria</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-gavel"></i> Marco normativo a revisar</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr><td>Constitución Política del Estado de Yucatán, normativa de firma electrónica y de gobierno digital, y atribuciones de la Subsecretaría de TIC</td></tr>
+                                <tr><td>Ley de Transporte del Estado (incluidas las reformas de 2026 y el Decreto 187/2026), concesiones, tarifas y plataformas</td></tr>
+                                <tr><td>Código Fiscal y Ley General de Hacienda del Estado, Ley de Ingresos y convenios de colaboración administrativa en materia fiscal federal</td></tr>
+                                <tr><td>Normativa registral y catastral, Ley que crea el INSEJUPY, Ley del Catastro y normativa notarial</td></tr>
+                                <tr><td>Ley de Turismo del Estado y la reforma en curso sobre plataformas de hospedaje</td></tr>
+                                <tr><td>Normativa sanitaria federal y estatal aplicable a establecimientos de salud, publicidad de servicios médicos, telemedicina y expediente clínico electrónico (Ley General de Salud, COFEPRIS y normas oficiales aplicables)</td></tr>
+                                <tr><td>Marco de agua potable (derecho humano) y normativa de los organismos operadores</td></tr>
+                                <tr><td>Normativa financiera de pagos, corresponsales y comisiones; operar con un banco aliado que sea titular de los fondos</td></tr>
+                                <tr><td>Reglas de deuda pública y financiamiento municipal (Ley de Disciplina Financiera de las Entidades Federativas y los Municipios y normativa estatal)</td></tr>
+                                <tr><td>Telecomunicaciones y espectro (WiFi público), y marco federal de pagos digitales a vigilar durante el trámite legislativo</td></tr>
+                                <tr><td>Leyes de adquisiciones, obra pública y asociaciones público-privadas, transparencia y protección de datos personales</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-circle-info"></i> Nota</div>
+                    <div class="table-responsive">
+                        <table class="data-table"><tbody>
+                            <tr><td>Se recomienda que la Consejería Jurídica o un despacho local confirme el esquema de cada proyecto antes de la presentación formal. Los trámites de licencias y autorizaciones se gestionan con cada autoridad competente.</td></tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 RIESGOS -->
+        <section id="riesgos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">07</span>
+                    <h2 class="section-title">Riesgos y Mitigación</h2>
+                    <p class="section-subtitle">Cada riesgo identificado tiene una mitigación concreta</p>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-shield-halved"></i> Matriz de riesgos</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Riesgo</th><th>Descripción</th><th>Mitigación</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Jurídico</strong></td><td>Esquemas de pago por resultados en materia fiscal; valor legal de credenciales digitales; concesiones y APP; uso de seguros extranjeros</td><td>Revisión previa con Consejería Jurídica; pilotos bajo figuras ya contempladas en la normativa</td></tr>
+                                <tr><td><strong>Político y social</strong></td><td>Sensibilidad en transporte y fiscalización; percepción de más control o de privatización</td><td>Comunicación centrada en facilitación y transparencia; participación de concesionarios, cámaras y sociedad civil</td></tr>
+                                <tr><td><strong>Datos</strong></td><td>Calidad desigual de padrones; fragmentación entre dependencias</td><td>Fase 0 de depuración; gobierno de datos con responsable por dependencia</td></tr>
+                                <tr><td><strong>Seguridad de la información</strong></td><td>Ataques cibernéticos, filtraciones o uso indebido de datos fiscales y clínicos</td><td>Arquitectura segura, auditorías externas, cifrado y accesos mínimos</td></tr>
+                                <tr><td><strong>Sanitario y reputacional</strong></td><td>Mala práctica o publicidad engañosa en turismo médico que dañe la imagen del estado</td><td>Sello de verificación, seguros de complicaciones, supervisión sanitaria y retiro del sello ante quejas</td></tr>
+                                <tr><td><strong>Equidad en salud</strong></td><td>Que el turismo médico desplace la atención a la población local</td><td>Convenio de reinversión parcial en salud pública; telemedicina para el interior; indicadores de acceso local</td></tr>
+                                <tr><td><strong>Adopción</strong></td><td>Brecha digital y resistencia al cambio</td><td>Canal presencial se mantiene; capacitación; acompañamiento en municipios</td></tr>
+                                <tr><td><strong>Financiero</strong></td><td>Expectativas de recaudación o de pacientes no alcanzadas; ingresos publicitarios menores a lo previsto</td><td>Pilotos con línea base, metas conservadoras y reportes periódicos</td></tr>
+                                <tr><td><strong>Dependencia externa</strong></td><td>Rutas aéreas, plataformas, proveedores o tecnología de terceros</td><td>Arquitectura abierta, cláusula de salida ordenada y proveedores alternos</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 08 VALOR Y ACERCAMIENTO -->
+        <section id="contacto" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">08</span>
+                    <h2 class="section-title">Valor Político y Plan de Acercamiento</h2>
+                    <p class="section-subtitle">Resultados visibles, medibles y comunicables, con una ruta clara para iniciar</p>
+                </div>
+
+                <div class="valor-grid">
+                    <div class="valor-card">
+                        <div class="valor-icon"><i class="fas fa-scale-balanced"></i></div>
+                        <h4>Sin Nuevos Impuestos</h4>
+                        <p>El aumento de recaudación proviene de mejor cumplimiento, menos fuga y nuevos servicios, no de mayores tasas</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon"><i class="fas fa-people-roof"></i></div>
+                        <h4>Cercanía con el Pueblo</h4>
+                        <p>La ventanilla, la app, el WiFi y la telemedicina llevan la cercanía al día a día, con atención en maya yucateco en los 106 municipios</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                        <h4>Orden y Transparencia</h4>
+                        <p>Registro de hospedaje, conciliación del transporte, sello de turismo médico y alertas patrimoniales dan reglas claras y reducen discrecionalidad</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Estado Innovador</h4>
+                        <p>Yucatán puede ser el primer estado con un hub de salud verificado y una ventanilla única con identidad digital</p>
+                    </div>
+                    <div class="valor-card">
+                        <div class="valor-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <h4>Resultados en el Periodo</h4>
+                        <p>Los pilotos de 100 días permiten mostrar avances antes del cierre de 2027 y escalar con evidencia</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper" style="margin-top:2rem;">
+                    <div class="table-title"><i class="fas fa-sitemap"></i> Dependencias y actores clave</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Actor</th><th>Proyectos</th><th>Interés probable</th></tr></thead>
+                            <tbody>
+                                <tr><td>Secretaría de Administración y Finanzas y AAFY</td><td>P1, P2, P4, P7, P12</td><td>Recaudación, tableros, cobranza, cumplimiento</td></tr>
+                                <tr><td>SSP</td><td>P2</td><td>Licencias, padrón y verificación en campo</td></tr>
+                                <tr><td>ATY y concesionarios</td><td>P5, P6</td><td>Conciliación, pagos oportunos, flota y concesiones</td></tr>
+                                <tr><td>INSEJUPY y municipios</td><td>P3, P8, P9</td><td>Catastro, registro, predial y servicios municipales</td></tr>
+                                <tr><td>Sefotur y clúster médico</td><td>P12, P13</td><td>Turismo, hospedaje, turismo médico, datos de destino</td></tr>
+                                <tr><td>Secretaría de Salud e IMSS-Bienestar</td><td>P13</td><td>Telemedicina, abasto y atención en el interior</td></tr>
+                                <tr><td>Subsecretaría de TIC</td><td>P1, P10, P11</td><td>Interoperabilidad, conectividad, gobierno digital</td></tr>
+                                <tr><td>Consejería Jurídica</td><td>Todos</td><td>Viabilidad legal de esquemas</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOSARIO -->
+        <section id="glosario" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">G</span>
+                    <h2 class="section-title">Glosario de Términos</h2>
+                    <p class="section-subtitle">Cada término tiene un enlace para ir al contexto donde se usa en la propuesta</p>
+                </div>
+
+                <div class="glos-index">
+                    <a href="#g-pos">POS</a>
+                    <a href="#g-pobreza-md">Pobreza multidimensional</a>
+                    <a href="#g-vayven">Va y Ven</a>
+                    <a href="#g-spei">SPEI</a>
+                    <a href="#g-codi">CoDi</a>
+                    <a href="#g-enif">ENIF</a>
+                    <a href="#g-firma">Firma electrónica avanzada</a>
+                    <a href="#g-saas">SaaS</a>
+                    <a href="#g-comodato">Comodato</a>
+                    <a href="#g-folio">Folio real electrónico</a>
+                    <a href="#g-gravamen">Libertad de gravamen</a>
+                    <a href="#g-alerta">Alerta registral</a>
+                    <a href="#g-refrendo">Refrendo</a>
+                    <a href="#g-predial">Predial</a>
+                    <a href="#g-concesion">Concesión</a>
+                    <a href="#g-app">APP</a>
+                    <a href="#g-ahorro">Ahorro compartido</a>
+                    <a href="#g-minimo">Mínimo vital</a>
+                    <a href="#g-japay">JAPAY</a>
+                    <a href="#g-denue">DENUE</a>
+                    <a href="#g-linea">Línea base</a>
+                    <a href="#g-palanca">Palanca de recaudación</a>
+                    <a href="#g-remesas">Remesas</a>
+                    <a href="#g-provee">Proveeduría local</a>
+                    <a href="#g-p2p">P2P</a>
+                    <a href="#g-turn">Servidor TURN</a>
+                    <a href="#g-hospedaje">Impuesto sobre Hospedaje</a>
+                    <a href="#g-simty">Simty</a>
+                    <a href="#g-joint">Joint Commission</a>
+                    <a href="#g-cury">CURP Digital</a>
+                </div>
+
+                <div class="glos-grid">
+                    <div class="glos-card" id="g-pos">
+                        <div class="glos-head"><h3>POS <span>(Punto de Venta)</span></h3><a href="#economia" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Terminal o equipo para cobrar pagos digitales (tarjeta, QR). En esta propuesta son puntos de servicio en abarrotes y tortillerías, gratuitos para el comercio y financiados con comisiones centavo a centavo (P7).</p>
+                    </div>
+                    <div class="glos-card" id="g-pobreza-md">
+                        <div class="glos-head"><h3>Pobreza multidimensional <span>(INEGI)</span></h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Medición conjunta de ingresos y carencias sociales (salud, educación, servicios, vivienda). En Yucatán es de 26.6% en 2024, por debajo del promedio nacional (29.6%); la rural alcanza 35.2% frente a 25.1% urbana [17].</p>
+                    </div>
+                    <div class="glos-card" id="g-vayven">
+                        <div class="glos-head"><h3>Va y Ven</h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Sistema de transporte de la zona metropolitana de Mérida: pasó de 265,194 pasajeros diarios en 2024 a 372,638 en 2025 (+40%) y cubre 81% de la ciudad. El Decreto 187/2026 cambió el pago a kilómetros efectivamente recorridos [5].</p>
+                    </div>
+                    <div class="glos-card" id="g-spei">
+                        <div class="glos-head"><h3>SPEI</h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Sistema de Pagos Electrónicos Interbancarios, operado por Banxico, para transferencias inmediatas entre bancos. Una reforma en vigor desde junio de 2026 amplía las cuentas simplificadas para pequeños negocios.</p>
+                    </div>
+                    <div class="glos-card" id="g-codi">
+                        <div class="glos-head"><h3>CoDi</h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Plataforma de Banxico para cobrar o pagar mediante códigos QR en tiempo real, sin costo para el comprador. Impulso clave para la digitalización de pagos en comercios de barrio.</p>
+                    </div>
+                    <div class="glos-card" id="g-enif">
+                        <div class="glos-head"><h3>ENIF <span>(Banxico-INEGI)</span></h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Encuesta Nacional de Inclusión Financiera. Fuente para medir localmente el uso de efectivo en Yucatán, que no se extrapola de cifras de otros estados.</p>
+                    </div>
+                    <div class="glos-card" id="g-firma">
+                        <div class="glos-head"><h3>Firma electrónica avanzada</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Firma digital con validez jurídica, respaldada por la normativa estatal de firma electrónica. Permite documentos y trámites legalmente vinculantes sin papel ni presencia física, con sello digital verificable por QR.</p>
+                    </div>
+                    <div class="glos-card" id="g-saas">
+                        <div class="glos-head"><h3>SaaS <span>(Software as a Service)</span></h3><a href="#contratacion" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Software como servicio: el proveedor opera la plataforma en su infraestructura y el cliente paga por licencia, usuario o transacción. Modalidad recomendada para la ventanilla única y la app de gobierno.</p>
+                    </div>
+                    <div class="glos-card" id="g-comodato">
+                        <div class="glos-head"><h3>Comodato</h3><a href="#economia" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Prestación de uso de un bien sin cobro, con obligación de devolverlo. Aquí: el POS (P7) se entrega sin costo al comercio mientras cumpla un mínimo mensual de operaciones, y puede retirarse si no se usa.</p>
+                    </div>
+                    <div class="glos-card" id="g-folio">
+                        <div class="glos-head"><h3>Folio real electrónico</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Registro digital único de cada propiedad en el Registro Público, con todo su historial (inscripciones, gravámenes, traspasos) consultable en línea. INSEJUPY ya reporta 1,666,764 predios con folio electrónico; P3 completa el ciclo digital.</p>
+                    </div>
+                    <div class="glos-card" id="g-gravamen">
+                        <div class="glos-head"><h3>Certificado de libertad de gravamen</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Documento oficial que confirma si una propiedad está libre de deudas o cargas hipotecarias. Con P3 se emite en minutos, con pago en línea y firma electrónica verificable.</p>
+                    </div>
+                    <div class="glos-card" id="g-alerta">
+                        <div class="glos-head"><h3>Alerta registral</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Notificación automática al celular del propietario ante cualquier movimiento sobre su predio. Herramienta central contra el despojo y el fraude inmobiliario (P3).</p>
+                    </div>
+                    <div class="glos-card" id="g-refrendo">
+                        <div class="glos-head"><h3>Refrendo</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Pago anual obligatorio para dar continuidad a una licencia de conducir o a la vigencia de una placa. P2 lo cobra en línea y en comercios, con recordatorios automáticos.</p>
+                    </div>
+                    <div class="glos-card" id="g-predial">
+                        <div class="glos-head"><h3>Predial</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Impuesto anual sobre la propiedad inmobiliaria, competencia municipal. Con P3 se mejora la base catastral y la recaudación mediante convenios con los 106 municipios.</p>
+                    </div>
+                    <div class="glos-card" id="g-concesion">
+                        <div class="glos-head"><h3>Concesión</h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Autorización para prestar un servicio público (Va y Ven, taxi, mototaxi). Genera derechos de concesión que integran ingresos; el Decreto 187/2026 reorganizó la ATY y el modelo financiero del transporte [5].</p>
+                    </div>
+                    <div class="glos-card" id="g-app">
+                        <div class="glos-head"><h3>APP <span>(Asociación Público-Privada)</span></h3><a href="#contratacion" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Esquema contractual para proyectos de infraestructura en el que el sector privado financia, construye u opera un servicio a cambio de pagos, ingresos o concesión a largo plazo. Requiere estudio de viabilidad.</p>
+                    </div>
+                    <div class="glos-card" id="g-ahorro">
+                        <div class="glos-head"><h3>Ahorro compartido</h3><a href="#contratacion" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Modelo de contratación en el que el proveedor paga su inversión con el ahorro energético o recaudatorio generado. Si no hay ahorro verificado, no hay pago. Requiere línea base y auditoría independiente.</p>
+                    </div>
+                    <div class="glos-card" id="g-minimo">
+                        <div class="glos-head"><h3>Mínimo vital</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Cantidad garantizada de agua potable para uso esencial, que no se corta aunque exista adeudo (el agua es un derecho humano). Ante falta de pago se limita el caudal, no se interrumpe el servicio (P8).</p>
+                    </div>
+                    <div class="glos-card" id="g-japay">
+                        <div class="glos-head"><h3>JAPAY</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Junta de Agua Potable y Alcantarillado de Yucatán, organismo operador de agua. Con P8 se validan con JAPAY el gasto eléctrico del bombeo y los esquemas de ahorro compartido con energía solar.</p>
+                    </div>
+                    <div class="glos-card" id="g-denue">
+                        <div class="glos-head"><h3>DENUE <span>(INEGI)</span></h3><a href="#recaudacion" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Directorio Estatal de Unidades Económicas: base nacional de negocios con actividad, tamaño y ubicación georreferenciada. Fundamental para dimensionar la red de POS (P7) y priorizar municipios.</p>
+                    </div>
+                    <div class="glos-card" id="g-linea">
+                        <div class="glos-head"><h3>Línea base</h3><a href="#recaudacion" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Foto inicial de un indicador antes del proyecto (recaudación, consumo, cartera). Sin ella no se puede demostrar después si el proyecto sirvió. Primer entregable de esta propuesta.</p>
+                    </div>
+                    <div class="glos-card" id="g-palanca">
+                        <div class="glos-head"><h3>Palanca de recaudación</h3><a href="#recaudacion" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Mecanismo de ingreso adicional. La propuesta identifica cuatro: ampliar la base de contribuyentes, elevar el cumplimiento, reducir costo y fuga, y crear ingresos por servicios y concesiones.</p>
+                    </div>
+                    <div class="glos-card" id="g-remesas">
+                        <div class="glos-head"><h3>Remesas</h3><a href="#economia" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Dinero enviado por personas desde el exterior a sus familias en Yucatán. Su cobro puede integrarse en la red de POS comunitario (P7) como servicio adicional con comisión.</p>
+                    </div>
+                    <div class="glos-card" id="g-provee">
+                        <div class="glos-head"><h3>Proveeduría local</h3><a href="#economia" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Enlace directo entre productores yucatecos y tiendas de barrio a través de la red de POS (P7): rutas de surtido, pedidos y promoción de la marca local.</p>
+                    </div>
+                    <div class="glos-card" id="g-p2p">
+                        <div class="glos-head"><h3>P2P <span>(Peer-to-Peer)</span></h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Conexión directa entre dos dispositivos (par a par) sin pasar por un servidor central. En la app de gobierno (P11) permite llamadas y denuncias usando mínimos recursos de servidor y datos.</p>
+                    </div>
+                    <div class="glos-card" id="g-turn">
+                        <div class="glos-head"><h3>Servidor TURN <span>(Relevo seguro)</span></h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Servidor de relevo que facilita conexiones de voz en redes móviles restringidas. En las denuncias de la app de gobierno (P11) protege la identidad del denunciante.</p>
+                    </div>
+                    <div class="glos-card" id="g-hospedaje">
+                        <div class="glos-head"><h3>Impuesto sobre Hospedaje</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Grava el hospedaje en el estado; su tasa es de 4.5% en 2026 [14]. Con P12 se busca mayor certeza recaudatoria mediante el Registro Estatal Digital de Prestadores de Hospedaje.</p>
+                    </div>
+                    <div class="glos-card" id="g-simty">
+                        <div class="glos-head"><h3>Simty <span>(Sefotur)</span></h3><a href="#diagnostico" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Sistema de Inteligencia de Mercados Turísticos del Gobierno del Estado. Fuente de procedencia del turismo (Norteamérica 49.7%) y base para la inteligencia de destino de P12.</p>
+                    </div>
+                    <div class="glos-card" id="g-joint">
+                        <div class="glos-head"><h3>Joint Commission</h3><a href="#portafolio" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Acreditación internacional hospitalaria (EE.UU.) que permite aceptar seguros médicos extranjeros. Clave para el turismo médico: P13 acompaña a hospitales de Mérida en su ruta de certificación.</p>
+                    </div>
+                    <div class="glos-card" id="g-cury">
+                        <div class="glos-head"><h3>CURP Digital</h3><a href="#anexos" class="glos-link">Ver contexto <i class="fas fa-arrow-right"></i></a></div>
+                        <p>Versión digital verificable de la Clave Única de Registro de Población, conforme avance el marco federal. Línea de crecimiento futuro integrada a la ventanilla única (P1).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09 ANEXOS -->
+        <section id="anexos" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">09</span>
+                    <h2 class="section-title">Anexos</h2>
+                    <p class="section-subtitle">Cuestionario de sondeo, fuentes y líneas de crecimiento futuro</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-clipboard-question"></i> Anexo A · Cuestionario de sondeo para las dependencias (Fase 0)</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th>Dependencia</th><th>Información a solicitar</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Administración y Finanzas / AAFY</strong></td><td>Serie histórica 2021-2026 de ingresos propios por concepto y de cartera vencida · Padrones disponibles (vehículos, nómina, hospedaje, derechos) y su interoperabilidad · Canales de pago actuales y porcentaje de pagos digitales · Facilidades de pago vigentes y tasas de morosidad por impuesto</td></tr>
+                                <tr><td><strong>SSP</strong></td><td>Número de licencias emitidas por año, tiempos de espera y trámites ya disponibles en línea · Procedimiento actual de validación de exenciones del Decreto 143/2025</td></tr>
+                                <tr><td><strong>ATY</strong></td><td>Sistema de cobro actual del Va y Ven, equipos a bordo y estado de la telemetría · Metodología de cálculo de kilómetros efectivamente recorridos y puntos de conflicto con concesionarios · Registro de mototaxis y taxis en municipios del interior</td></tr>
+                                <tr><td><strong>INSEJUPY y municipios</strong></td><td>Porcentaje de predios con cartografía actualizada y antigüedad promedio de valores catastrales · Municipios con sistemas de predial propios y su nivel de digitalización</td></tr>
+                                <tr><td><strong>Sefotur y clúster médico</strong></td><td>Número actual de hospitales, médicos, facilitadores, clínicas dentales y hoteles adaptados; estado de las certificaciones internacionales · Cifras recientes de pacientes extranjeros, procedencia, especialidades y gasto · Estado de la reforma a la Ley de Turismo y calendario previsto</td></tr>
+                                <tr><td><strong>Salud y TIC</strong></td><td>Clínicas conectadas, capacidad de ancho de banda y equipamiento para teleconsulta · Sistemas de expediente clínico y de abasto de medicamentos en operación</td></tr>
+                                <tr><td><strong>Agua y energía</strong></td><td>Gasto eléctrico en bombeo y alumbrado por organismo o municipio · Pérdidas de agua estimadas y cartera vencida</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-book"></i> Anexo B · Fuentes consultadas (selección)</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead><tr><th style="width:80px">Ref.</th><th>Fuente</th></tr></thead>
+                            <tbody>
+                                <tr><td>[1]</td><td>Gobierno del Estado de Yucatán. Plan Estatal de Desarrollo Renacimiento Maya 2024-2030</td></tr>
+                                <tr><td>[2]</td><td>Iniciativa de Ley de Ingresos del Estado de Yucatán, ejercicio fiscal 2026 (AAFY / Congreso)</td></tr>
+                                <tr><td>[3]</td><td>Por Esto! «Yucatán aumenta 19% la recaudación de impuestos estatales durante el primer semestre de 2026», 30 jul 2026</td></tr>
+                                <tr><td>[4]</td><td>Moody's Local México. Ratificación AA-.mx con perspectiva estable al Estado de Yucatán, 8 jun 2026</td></tr>
+                                <tr><td>[5]</td><td>Por Esto! «Nuevas reglas para el Va y Ven», 28 may 2026</td></tr>
+                                <tr><td>[6][7]</td><td>Por Esto! Adeudo de 189 mdp y reducción de flota del Va y Ven, jun 2026</td></tr>
+                                <tr><td>[9]</td><td>Decreto 143/2025 (AAFY); costos de licencias de conducir 2026</td></tr>
+                                <tr><td>[10]</td><td>INSEJUPY. Proyecto Ejecutivo de Modernización Integral (PEMI) 2025 y 2026; indicadores de resultados 2026</td></tr>
+                                <tr><td>[11][12]</td><td>Diario de Yucatán (INEGI 2025); DPL News: Yucatán Digital y brecha digital</td></tr>
+                                <tr><td>[14]</td><td>Por Esto! «Más de 12 mil hospedajes en aplicaciones digitales operan sin regulación en Yucatán»; Impuesto sobre Hospedaje 2026</td></tr>
+                                <tr><td>[17]</td><td>INEGI. Medición de pobreza multidimensional 2024</td></tr>
+                                <tr><td>[18]-[20]</td><td>El Financiero y Sipse/Novedades: turismo médico, clúster médico y portal Yucatán Healthcare</td></tr>
+                                <tr><td>[21]-[24]</td><td>Conectividad aérea (Simty), turismo en EE.UU., meta 2.7M de turistas e inversión turística (Sefotur)</td></tr>
+                                <tr><td>[25]</td><td>Líder Empresarial / Deloitte: hospitales exportadores de servicios de salud en México</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-circle-exclamation"></i> Nota sobre las fuentes</div>
+                    <div class="table-responsive">
+                        <table class="data-table"><tbody>
+                            <tr><td>Las notas periodísticas deben verificarse con la fuente oficial antes de su uso en documentos formales. Las cifras fiscales y operativas internas deben validarse con las dependencias antes de cualquier decisión. El marco federal de pagos digitales (SPEI, CoDi, iniciativa de Ley de Economía Digital) proviene del estudio base del equipo; confirmar vigencia.</td></tr>
+                        </tbody></table>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table-title"><i class="fas fa-seedling"></i> Anexo C · Líneas de crecimiento futuras</div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr><td><strong>Escudo de infraestructura crítica</strong> (XGT GNSS Anti-Drone Shield): detección y alerta temprana de drones en el Puerto de Altura de Progreso, el Tren de Carga Poxilá–Progreso y eventos masivos, integrada al centro de monitoreo de la SSP. Las contramedidas activas son competencia de las autoridades federales y requerirían convenios previos</td></tr>
+                                <tr><td><strong>CURP Digital y Expediente Digital Ciudadano</strong>, conforme avance el marco federal, integrados a la ventanilla (P1)</td></tr>
+                                <tr><td><strong>Observatorio estatal de datos abiertos</strong> de movilidad, turismo, salud y recaudación</td></tr>
+                                <tr><td><strong>Medicina del deporte y turismo de bienestar</strong> como especialidades adicionales del Health Hub, y turismo residencial para extranjeros que eligen Yucatán para vivir y atenderse</td></tr>
+                                <tr><td><strong>Gemelo digital de Mérida</strong> para planeación urbana y de movilidad</td></tr>
+                                <tr><td><strong>Ciberseguridad como servicio</strong> para ayuntamientos pequeños</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <div class="logo-icon"><i class="fas fa-landmark"></i></div>
+                            <div class="logo-text">
+                                <span class="logo-title">Yucatán Digital y Próspero</span>
+                                <span class="logo-subtitle">Propuesta Estratégica 1.0</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Estudio de oportunidades y portafolio de proyectos tecnológicos, de recaudación, movilidad, turismo, salud y servicios para el Gobierno del Estado de Yucatán. Preparado por XGT Group Technologies.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Secciones</h4>
+                        <ul class="footer-links">
+                            <li><a href="#resumen">Resumen Ejecutivo</a></li>
+                            <li><a href="#diagnostico">Diagnóstico</a></li>
+                            <li><a href="#portafolio">Portafolio P1–P13</a></li>
+                            <li><a href="#glosario">Glosario</a></li>
+                            <li><a href="#anexos">Anexos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Proyectos Destacados</h4>
+                        <ul class="footer-links">
+                            <li><a href="#gobierno">Ventanilla Única Digital</a></li>
+                            <li><a href="#economia">Red de POS Comunitario</a></li>
+                            <li><a href="#turismo">Yucatán Health Hub</a></li>
+                            <li><a href="#servicios">Agua Inteligente</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Información</h4>
+                        <ul class="footer-links">
+                            <li><span><i class="fas fa-file-alt"></i> Versión 1.0</span></li>
+                            <li><span><i class="fas fa-calendar"></i> Octubre 2026</span></li>
+                            <li><span><i class="fas fa-shield-alt"></i> Documento Confidencial</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Yucatán Digital y Próspero · XGT Group Technologies. Propuesta para consideración de las autoridades estatales y municipales.</p>
+                    <p class="footer-note">Este documento está basado en fuentes públicas; las cifras fiscales y operativas internas deben validarse con las dependencias antes de cualquier decisión. La adopción, el alcance y la forma de cada proyecto corresponden a las autoridades.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
