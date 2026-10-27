@@ -364,4 +364,4 @@ document.querySelectorAll('.full-ficha, .roadmap-card, .stat-card, .table-wrappe
 
 console.log('%c🏛️ Yucatán Digital y Próspero', 'color: #d4af37; font-size: 18px; font-weight: bold;');
 console.log('%cPropuesta Estratégica v1.0 · Octubre 2026', 'color: #0f3460; font-size: 13px;');
-console.log('%cDocumento Confidencial · XGT Group Technologies', 'color: #8b2635; font-size: 12px; font-weight: bold;');
+console.log('%cDocumento Confidencial · Grupo CSI', 'color: #8b2635; font-size: 12px; font-weight: bold;');
