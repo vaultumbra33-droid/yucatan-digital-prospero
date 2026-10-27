@@ -1,5 +1,5 @@
 // ── Acceso por PIN ──────────────────────────────────────────
-const correctPin = "8822";
+const correctPin = "1251";
 const pinModal = document.getElementById('pinModal');
 const mainSite = document.getElementById('mainSite');
 const pinDigits = document.querySelectorAll('.pin-digit');
